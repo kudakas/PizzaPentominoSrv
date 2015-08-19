@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class LoginServlet
@@ -22,21 +23,24 @@ public class LoginServlet extends HttpServlet {
 		// リクエストパラメータから入力されたパスワードを取り出し
 		String password = request.getParameter("password");
 
+		// セッションを取得
+		HttpSession session= request.getSession();
+
 		String nextJsp;
 		if("webtext".equals(password)){
 			// 正しいパスワードの場合
 			// ユーザー名をリクエストに格納する
 			String user = request.getParameter("user");
-			request.setAttribute("user",user);
+			session.setAttribute("user",user);
 
 			// 繊維先を商品一覧画面にする
 			nextJsp = "/itemList.jsp";
 		}else{
 			// パスワードが正しくなければ、繊維先をログイン失敗ページにする。
-			nextJsp = "loginFailed.jsp";
+			nextJsp = "/loginFailed.jsp";
 		}
 
-		// 繊維先のJSPへフォワード
+		// 遷移先のJSPへフォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher(nextJsp);
 		dispatcher.forward(request, response);
 	}

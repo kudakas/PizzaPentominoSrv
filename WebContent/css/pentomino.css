@@ -1,4 +1,5 @@
 /* body */
+/* --------- ««« ‘S‘Ì ««« --------- */
 body
 {
 	margin : 0px;
@@ -26,6 +27,8 @@ h2
 	font-size : 18pt;
 }
 
+/* --------- ªªª ‘S‘Ì ªªª --------- */
+/* --------- ««« Login.jsp ««« --------- */
 form.login
 {
 	background-color : #eaffff;
@@ -46,21 +49,45 @@ table.login td
 	font-weight : bold;
 }
 
+/* --------- ªªª Login.jsp ªªª --------- */
+/* --------- ««« itemList.jsp ««« --------- */
+form.itemList
+{
+	padding : 5px;
+}
+
 table.menu
 {
+	border: groove 3px;
 	background-color : #eaffff;
 }
 
 table.menu th
 {
-	padding : 2px;
+	padding : 1px;
+	font-family : MeiryoKe_PGothic;
 	text-align : center;
 	font-weight : bold;
 	background-color : #afaffe;
+	border: groove 3px;
 }
+
+table.menu td
+{
+	border : groove 1px;
+	width : 300px;
+}
+
+table.menu td.ckeckbox
+{
+	border : groove 1px;
+	width : 20px;
+}
+
 table.menu td.price
 {
 	padding : 2px;
 	text-align : right;
+	width : 70px;
 }
-
+/* --------- ªªª itemList.jsp ªªª --------- */

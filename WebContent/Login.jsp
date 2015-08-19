@@ -9,8 +9,9 @@
 	</head>
 	<body>
 		<h1>ピザ・ペントミノへようこそ！</h1>
-		<form action="login.do" method="post" class="login">
+		<form action="Login.do" method="post" class="login">
 			<table>
+
 				<tr>
 					<td>ユーザ名</td>
 					<td><input type="text" name="user" size="16" value=""/></td>
