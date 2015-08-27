@@ -5,7 +5,8 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="css/pentomino.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/itemList.css">
 		<title>ピザ・ペントミノ - 商品一覧</title>
 	</head>
 	<body>
@@ -49,8 +50,8 @@
 			<form action="CertList.jsp" class ="itemList">
 				<input type="submit" value="カートの内容を確認して注文へ進む"/>
 			</form>
-			<form class ="itemList">
-				<input type ="button" value="ログアウト">
+			<form action="Logout.do" class ="itemList">
+				<input type ="submit" value="ログアウト">
 			</form>
 		</div>
 	</body>

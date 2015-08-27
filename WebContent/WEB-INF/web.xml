@@ -17,9 +17,17 @@
     <servlet-name>ItemList</servlet-name>
     <servlet-class>ItemListServlet</servlet-class>
   </servlet>
-    <servlet>
+  <servlet>
     <servlet-name>CertList</servlet-name>
     <servlet-class>CertListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>LogoutServlet</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>CertListClear</servlet-name>
+    <servlet-class>CertListClearServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Login</servlet-name>
@@ -29,8 +37,16 @@
     <servlet-name>ItemList</servlet-name>
     <url-pattern>/ItemList.do</url-pattern>
   </servlet-mapping>
-    <servlet-mapping>
+  <servlet-mapping>
     <servlet-name>CertList</servlet-name>
     <url-pattern>/CertList.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout.do</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>CertListClear</servlet-name>
+    <url-pattern>/CertListClear.do</url-pattern>
   </servlet-mapping>
 </web-app>

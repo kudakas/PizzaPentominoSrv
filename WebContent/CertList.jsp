@@ -9,6 +9,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
 		<title>ピザ・ペンテミノ - カート一覧</title>
 	</head>
 	<body>
@@ -53,17 +54,15 @@
 				</tr>
 				<tr>
 					<td colspan="3">合計金額</td>
-				</tr>
-				<tr>
 					<td><%= 800*itemACount+900*itemBCount+1000*itemCCount+1000*itemDCount+1300*itemECount %></td>
 				</tr>
 			</table>
 		</form>
-		<form>
-			<input type="button" value ="この内容で注文する">
+		<form action="OrderComplete.jsp">
+			<input type="submit" value ="この内容で注文する">
 		</form>
-		<form>
-			<input type="button" value ="注文をやりなおす">
+		<form action="CertListClear.do">
+			<input type="submit" value ="注文をやりなおす">
 		</form>
 	</body>
 </html>

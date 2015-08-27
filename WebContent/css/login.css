@@ -1,0 +1,19 @@
+form.login
+{
+	background-color : #eaffff;
+	text-align : center;
+	padding : 1em;
+}
+
+table.login
+{
+	text-align : center;
+	margin-bottom : 0.5em;
+}
+
+table.login td
+{
+	padding : 0.2px;
+	text-align : left;
+	font-weight : bold;
+}

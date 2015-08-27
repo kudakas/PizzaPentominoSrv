@@ -5,16 +5,11 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel=stylesheet type="text/css" href="css/common.css">
-		<title>ピザ・ペントミノ - ログインエラー</title>
+		<title>ピザ・ペントミノ - 注文完了</title>
 	</head>
 	<body>
-		<div align="center">
-			<h1>ピザ・ペントミノ</h1>
-			<p>
-				ユーザー名またはパスワードが間違っているため、<br/>
-				ログインできませんでした。
-			</p>
-			<a href = "Login.jsp">もう一度ログインする</a>
-		</div>
+		<h1>ピザ・ペントミノ</h1>
+		<p>ご注文ありがとうございました！</p>
+		<a href ="Logout.do">ログアウト</a>
 	</body>
 </html>

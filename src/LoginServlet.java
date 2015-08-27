@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 			String user = request.getParameter("user");
 			session.setAttribute("user",user);
 
-			// 繊維先を商品一覧画面にする
+			// 遷移先を商品一覧画面にする
 			nextJsp = "/itemList.jsp";
 		}else{
 			// パスワードが正しくなければ、繊維先をログイン失敗ページにする。
