@@ -1,0 +1,60 @@
+table
+{
+	border: groove 3px;
+	background-color : #eaffff;
+}
+
+table th
+{
+	padding : 1px;
+	font-family : MeiryoKe_PGothic;
+	text-align : center;
+	font-weight : bold;
+	background-color : #afaffe;
+	border: groove 3px;
+}
+
+table td.goods
+{
+	border : groove 1px;
+	width : 300px;
+}
+
+table td.price
+{
+	border : groove 1px;
+	padding : 2px;
+	text-align : right;
+	width : 70px;
+}
+
+table td.count
+{
+	border : groove 1px;
+	padding : 2px;
+	text-align : right;
+	width : 50px;
+}
+
+table td.subtotal
+{
+	border : groove 1px;
+	padding : 2px;
+	text-align : right;
+	width : 80px;
+}
+
+table td.totalMojiretsu
+{
+	border : groove 3px;
+	font-weight : bold;
+	background-color : #FFD5EC;
+	text-align : right;
+}
+
+table td.total
+{
+	border : groove 3px;
+	font-weight : bold;
+	background-color : #FFD5EC;
+}

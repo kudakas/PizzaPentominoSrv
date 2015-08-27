@@ -3,13 +3,13 @@ form.itemList
 	padding : 5px;
 }
 
-table.menu
+table
 {
 	border: groove 3px;
 	background-color : #eaffff;
 }
 
-table.menu th
+table th
 {
 	padding : 1px;
 	font-family : MeiryoKe_PGothic;
@@ -19,20 +19,21 @@ table.menu th
 	border: groove 3px;
 }
 
-table.menu td
-{
-	border : groove 1px;
-	width : 300px;
-}
-
-table.menu td.ckeckbox
+table td.ckeckbox
 {
 	border : groove 1px;
 	width : 20px;
 }
 
-table.menu td.price
+table td.goods
 {
+	border : groove 1px;
+	width : 300px;
+}
+
+table td.price
+{
+	border : groove 1px;
 	padding : 2px;
 	text-align : right;
 	width : 70px;
