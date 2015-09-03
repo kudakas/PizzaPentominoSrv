@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dto.ItemListDto;
+
 /**
  * Servlet implementation class ItemListServlet
  */
@@ -28,59 +30,120 @@ public class ItemListServlet extends HttpServlet {
 		// セッションを取得
 		HttpSession session = request.getSession();
 
+
 		// 商品Aを注文している場合
 		if(request.getParameter("itemA")!=null){
-			if(session.getAttribute("itemACount") != null){
-				itemACount =  Integer.parseInt(session.getAttribute("itemACount").toString());
-				itemACount++;
-				session.setAttribute("itemACount", itemACount);
+			if(session.getAttribute("itemA") != null){
+				ItemListDto itemListDto = (ItemListDto)session.getAttribute("itemA");
+				int count = itemListDto.getCount()+1;
+				itemListDto.setCount(count);
+				itemListDto.setCount(800*count);
+				session.setAttribute("itemA", itemListDto);
 			}else{
-				session.setAttribute("itemACount", itemACount);
+				ItemListDto itemListDto = new ItemListDto();
+				itemListDto.setGoodsName("マルゲリータ");
+				itemListDto.setCount(itemACount);
+				itemListDto.setSubTotal(800*itemACount);
+				session.setAttribute("itemA", itemListDto);
 			}
+		}else{
+			ItemListDto itemListDto = new ItemListDto();
+			itemListDto.setGoodsName("マルゲリータ");
+			itemListDto.setCount(0);
+			itemListDto.setSubTotal(0);
+			session.setAttribute("itemA", itemListDto);
 		}
 
 		// 商品Bを注文している場合
 		if(request.getParameter("itemB")!=null){
-			if(session.getAttribute("itemBCount") != null){
-				itemBCount =  Integer.parseInt(session.getAttribute("itemBCount").toString());
-				itemBCount++;
-				session.setAttribute("itemBCount", itemBCount);
+			if(session.getAttribute("itemB") != null){
+				ItemListDto itemListDto = (ItemListDto)session.getAttribute("itemB");
+				int count = itemListDto.getCount()  +1;
+				itemListDto.setCount(count);
+				itemListDto.setCount(900*count);
+				session.setAttribute("itemB", itemListDto);
 			}else{
-				session.setAttribute("itemBCount", itemBCount);
+				ItemListDto itemListDto = new ItemListDto();
+				itemListDto.setGoodsName("バジル・トマト");
+				itemListDto.setCount(itemBCount);
+				itemListDto.setSubTotal(900*itemBCount);
+				session.setAttribute("itemB", itemListDto);
 			}
+		}else{
+			ItemListDto itemListDto = new ItemListDto();
+			itemListDto.setGoodsName("バジル・トマト");
+			itemListDto.setCount(0);
+			itemListDto.setSubTotal(0);
+			session.setAttribute("itemB", itemListDto);
 		}
 
 		// 商品Cを注文している場合
 		if(request.getParameter("itemC")!=null){
-			if(session.getAttribute("itemCCount") != null){
-				itemCCount =  Integer.parseInt(session.getAttribute("itemCCount").toString());
-				itemCCount++;
-				session.setAttribute("itemCCount", itemCCount);
+			if(session.getAttribute("itemC") != null){
+				ItemListDto itemListDto = (ItemListDto)session.getAttribute("itemC");
+				int count = itemListDto.getCount()  +1;
+				itemListDto.setCount(count);
+				itemListDto.setCount(1000*count);
+				session.setAttribute("itemC", itemListDto);
 			}else{
-				session.setAttribute("itemCCount", itemCCount);
+				ItemListDto itemListDto = new ItemListDto();
+				itemListDto.setGoodsName("ナス・ミートソース");
+				itemListDto.setCount(itemCCount);
+				itemListDto.setSubTotal(1000*itemCCount);
+				session.setAttribute("itemC", itemListDto);
 			}
+		}else{
+			ItemListDto itemListDto = new ItemListDto();
+			itemListDto.setGoodsName("ナス・ミートソース");
+			itemListDto.setCount(0);
+			itemListDto.setSubTotal(0);
+			session.setAttribute("itemC", itemListDto);
 		}
 
 		// 商品Dを注文している場合
 		if(request.getParameter("itemD")!=null){
-			if(session.getAttribute("itemDCount") != null){
-				itemDCount =  Integer.parseInt(session.getAttribute("itemDCount").toString());
-				itemDCount++;
-				session.setAttribute("itemDCount", itemDCount);
+			if(session.getAttribute("itemD") != null){
+				ItemListDto itemListDto = (ItemListDto)session.getAttribute("itemD");
+				int count = itemListDto.getCount()  +1;
+				itemListDto.setCount(count);
+				itemListDto.setCount(1000*count);
+				session.setAttribute("itemD", itemListDto);
 			}else{
-				session.setAttribute("itemDCount", itemDCount);
+				ItemListDto itemListDto = new ItemListDto();
+				itemListDto.setGoodsName("アンチョビ・シーフード");
+				itemListDto.setCount(itemDCount);
+				itemListDto.setSubTotal(1000*itemDCount);
+				session.setAttribute("itemD", itemListDto);
 			}
+		}else{
+			ItemListDto itemListDto = new ItemListDto();
+			itemListDto.setGoodsName("アンチョビ・シーフード");
+			itemListDto.setCount(0);
+			itemListDto.setSubTotal(0);
+			session.setAttribute("itemD", itemListDto);
 		}
 
 		// 商品Eを注文している場合
 		if(request.getParameter("itemE")!=null){
-			if(session.getAttribute("itemECount") != null){
-				itemECount =  Integer.parseInt(session.getAttribute("itemECount").toString());
-				itemECount++;
-				session.setAttribute("itemECount", itemECount);
+			if(session.getAttribute("itemE") != null){
+				ItemListDto itemListDto = (ItemListDto)session.getAttribute("itemE");
+				int count = itemListDto.getCount()  +1;
+				itemListDto.setCount(count);
+				itemListDto.setCount(1300*count);
+				session.setAttribute("itemE", itemListDto);
 			}else{
-				session.setAttribute("itemECount", itemECount);
+				ItemListDto itemListDto = new ItemListDto();
+				itemListDto.setGoodsName("チーズ・ミルフィーユ");
+				itemListDto.setCount(itemECount);
+				itemListDto.setSubTotal(1000*itemECount);
+				session.setAttribute("itemE", itemListDto);
 			}
+		}else{
+			ItemListDto itemListDto = new ItemListDto();
+			itemListDto.setGoodsName("チーズ・ミルフィーユ");
+			itemListDto.setCount(0);
+			itemListDto.setSubTotal(0);
+			session.setAttribute("itemE", itemListDto);
 		}
 
 		response.sendRedirect("itemList.jsp");
